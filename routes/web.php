@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/list','App\Http\Controllers\HomeController@list');
+Route::get('/','App\Http\Controllers\HomeController@list');
 Route::post('/create-cheque','App\Http\Controllers\HomeController@cheque');
