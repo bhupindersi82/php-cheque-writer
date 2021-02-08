@@ -21,7 +21,7 @@ class HomeController extends Controller
         // build a new number transformer using the RFC 3066 language identifier
         $numberTransformer = $numberToWords->getNumberTransformer('en');
         $words = strtolower($numberTransformer->toWords($amount));
-        $words = str_replace('-',' ',$words);
+        $words = ucwords(str_replace('-',' ',$words));
         return view('cheque',['amount' => $amount, 'words' => $words]);
     }
 }
